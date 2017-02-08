@@ -11,6 +11,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "InterweaveSolutionsMobileAp
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps.projitems*{4604e6e7-10c7-428f-b744-6331c4daadd6}*SharedItemsImports = 4
+		InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps.projitems*{5340ccb8-32f4-4a62-a56c-a972ec6bff88}*SharedItemsImports = 4
 		InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps.projitems*{7e882012-5b2c-4ef3-98aa-927d21a4e126}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

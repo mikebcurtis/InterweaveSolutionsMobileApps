@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>4604e6e7-10c7-428f-b744-6331c4daadd6</ProjectGuid>
+    <ProjectGuid>{4604E6E7-10C7-428F-B744-6331C4DAADD6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>InterweaveSolutionsMobileApps.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -138,6 +138,21 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\graduate_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\website_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\calendar_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\interweave_header.png" />
   </ItemGroup>
   <Import Project="..\InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps.projitems" Label="Shared" Condition="Exists('..\InterweaveSolutionsMobileApps\InterweaveSolutionsMobileApps.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
