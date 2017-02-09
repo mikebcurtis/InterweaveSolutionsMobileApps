@@ -4,11 +4,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{4604E6E7-10C7-428F-B744-6331C4DAADD6}</ProjectGuid>
+    <ProjectGuid>{F69BAEE8-86DD-45C3-B120-292FD7D6DD5A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>InterweaveSolutionsMobileApps.iOS</RootNamespace>
+    <RootNamespace>InterweaveSolutionsMobileApps.Core.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>InterweaveSolutionsMobileApps.iOS</AssemblyName>
+    <AssemblyName>InterweaveSolutionsMobileApps.Core.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -65,6 +65,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterweaveSolutionsMobileApps.Core\InterweaveSolutionsMobileApps.Core.csproj">
+      <Name>InterweaveSolutionsMobileApps.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
@@ -140,19 +145,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\user_icon.png" />
+    <BundleResource Include="Resources\calendar_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\graduate_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\website_logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\calendar_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\interweave_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\website_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
