@@ -11,7 +11,7 @@ namespace InterweaveSolutionsMobileApps.Core
     {
         public async void Start(object hint = null)
         {
-            ShowViewModel<GroupsViewModel>();
+            //ShowViewModel<GroupsViewModel>();
         }
     }
 }

@@ -1,10 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
-using System;
-using System.Reflection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MvvmCross.Platform.IoC;
 
 namespace InterweaveSolutionsMobileApps.Core
 {
@@ -14,7 +9,9 @@ namespace InterweaveSolutionsMobileApps.Core
         {
             base.Initialize();
 
-            // TODO need to register classes with the IoC layer
+            //register classes with the IoC layer
+            CreatableTypes().EndingWith("Repository").AsInterfaces().RegisterAsLazySingleton();
+            CreatableTypes().EndingWith("Service").AsInterfaces().RegisterAsLazySingleton();
 
             RegisterAppStart(new AppStart());
         }
