@@ -11,7 +11,7 @@ namespace InterweaveSolutionsMobileApps.Core
     {
         public async void Start(object hint = null)
         {
-            //ShowViewModel<GroupsViewModel>();
+            //TODO navigate to the default viewmodel with ShowViewModel<GroupsViewModel>();
         }
     }
 }

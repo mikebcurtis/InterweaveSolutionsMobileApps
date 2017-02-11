@@ -50,6 +50,8 @@
     <Compile Include="Services\Data\IMeetingService.cs" />
     <Compile Include="Services\Data\MeetingDataService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\IMeetingsListViewModel.cs" />
+    <Compile Include="ViewModels\MeetingsListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
