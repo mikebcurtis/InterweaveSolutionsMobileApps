@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InterweaveSolutionsMobileApps.Core.ViewModels
 {
-    public interface IMeetingsListViewModel : IMvxViewModel
+    public interface IGroupsListViewModel : IMvxViewModel
     {
         
     }

@@ -1,4 +1,5 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using InterweaveSolutionsMobileApps.Core.ViewModels;
+using MvvmCross.Core.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace InterweaveSolutionsMobileApps.Core
     {
         public async void Start(object hint = null)
         {
-            //TODO navigate to the default viewmodel with ShowViewModel<GroupsViewModel>();
+            ShowViewModel<MeetingsListViewModel>();
         }
     }
 }

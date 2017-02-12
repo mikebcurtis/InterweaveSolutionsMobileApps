@@ -11,11 +11,8 @@ using UIKit;
 
 namespace InterweaveSolutionsMobileApps.Core.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("Views/GroupsListView")]
+    partial class Views/GroupsListView
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }

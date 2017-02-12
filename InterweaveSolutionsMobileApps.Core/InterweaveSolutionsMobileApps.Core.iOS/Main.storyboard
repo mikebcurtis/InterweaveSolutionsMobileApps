@@ -43,7 +43,7 @@
         </scene>
         <scene sceneID="18">
             <objects>
-                <viewController id="19" sceneMemberID="viewController">
+                <viewController id="19" sceneMemberID="viewController" customClass="Views/GroupsListView">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="11"/>
                         <viewControllerLayoutGuide type="bottom" id="12"/>
@@ -88,11 +88,7 @@
                             <color key="tintColor" colorSpace="calibratedRGB" red="0.098039215686274508" green="0.17647058823529413" blue="0.18823529411764706" alpha="1"/>
                         </variation>
                     </tabBar>
-                    <connections>
-                        <segue destination="19" kind="relationship" relationship="viewControllers" id="25"/>
-                        <segue destination="14" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue id="126" destination="34" kind="relationship" relationship="viewControllers"/>
-                    </connections>
+                    <connections/>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
