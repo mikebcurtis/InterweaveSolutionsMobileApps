@@ -12,11 +12,11 @@ using UIKit;
 
 namespace InterweaveSolutionsMobileApps.Core.iOS.Views
 {
-    public class MainViewController : MvxTabBarViewController<MainViewModel>
+    public partial class MainView : MvxTabBarViewController<MainViewModel>
     {
         private nint _tabsCreatedSoFar;
 
-        protected MainViewController(IntPtr handle) : base(handle)
+        protected MainView(IntPtr handle) : base(handle)
         {
         }
 
@@ -31,9 +31,9 @@ namespace InterweaveSolutionsMobileApps.Core.iOS.Views
         {
             var viewControllers = new UIViewController[]
             {
-                CreateTab("Grupos y Estudiantes", "user_icon", Mvx.Resolve<IGroupsListViewModel>()),
+                //CreateTab("Grupos y Estudiantes", "user_icon", Mvx.Resolve<IGroupsListViewModel>()),
                 CreateTab("Reuniones", "user_icon", Mvx.Resolve<IMeetingsListViewModel>()),
-                CreateTab("Certificados", "user_icon", Mvx.Resolve<ICertificateListViewModel>())
+                //CreateTab("Certificados", "user_icon", Mvx.Resolve<ICertificateListViewModel>())
             };
 
             ViewControllers = viewControllers;

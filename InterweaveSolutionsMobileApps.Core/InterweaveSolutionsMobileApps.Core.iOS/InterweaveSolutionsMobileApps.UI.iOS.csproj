@@ -158,7 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Storyboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -168,6 +168,18 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\MainView.designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MeetingsListCell.cs" />
+    <Compile Include="Views\MeetingsListCell.designer.cs">
+      <DependentUpon>MeetingsListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MeetingsListView.cs" />
+    <Compile Include="Views\MeetingsListView.designer.cs">
+      <DependentUpon>MeetingsListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Setup.cs" />
     <Compile Include="StoryboardContainer.cs" />
     <Compile Include="Utility\InterweaveSolutionsColors.cs" />
@@ -176,13 +188,8 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\BaseView.cs" />
-    <Compile Include="Views\CertificatesListView.cs" />
-    <Compile Include="Views\GroupsListView.cs" />
     <Compile Include="Views\ICertificateListViewModel.cs" />
-    <Compile Include="Views\MainViewController.cs" />
-    <Compile Include="Views\MeetingDetailView.cs" />
-    <Compile Include="Views\MeetingsListView.cs" />
-    <Compile Include="Views\ParticipantDetailView.cs" />
+    <Compile Include="Views\MeetingsListTableViewSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\calendar_icon.png" />

@@ -20,7 +20,6 @@ namespace InterweaveSolutionsMobileApps.Core.iOS.Views
             CreateBindings();
         }
 
-        protected virtual void CreateBindings()
-        { }
+        protected virtual void CreateBindings() { }
     }
 }

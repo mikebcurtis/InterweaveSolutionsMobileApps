@@ -36,7 +36,7 @@ namespace InterweaveSolutionsMobileApps.Core.ViewModels
                     {
                         throw new NotImplementedException();
                     }
-                );
+                 );
             }
         }
 
