@@ -95,11 +95,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InterweaveSolutionsMobileApps.Core\InterweaveSolutionsMobileApps.Core.csproj">
-      <Name>InterweaveSolutionsMobileApps.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9a865d4d-f1bc-465d-8669-73b083eaf4a5</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>InterweaveMobile</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Certificate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Group.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Meeting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Participant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\BaseRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\DemoGroupRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\DemoMeetingRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\DemoParticipantRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\IGroupRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\IMeetingRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repositories\IParticipantRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\GroupDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IGroupService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IMeetingService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MeetingDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CertificateListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GroupsListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ICertificateListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IGroupsListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IMeetingsListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MeetingsListViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
