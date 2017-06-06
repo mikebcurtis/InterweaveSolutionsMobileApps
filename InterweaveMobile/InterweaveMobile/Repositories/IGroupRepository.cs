@@ -10,6 +10,6 @@ namespace InterweaveMobile.Repositories
     public interface IGroupRepository
     {
         Task<IEnumerable<Group>> GetAllAsync();
-        Task<Group> GetById(int id);
+        Task<Group> GetById(Guid id);
     }
 }

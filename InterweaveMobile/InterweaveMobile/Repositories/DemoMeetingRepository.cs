@@ -9,40 +9,71 @@ namespace InterweaveMobile.Repositories
 {
     public class DemoMeetingRepository : IMeetingRepository
     {
-        private static readonly List<Meeting> demoMeetings = new List<Meeting>()
+        private static List<Meeting> demoMeetings = new List<Meeting>()
         {
             new Meeting
             {
-                Id = 0,
-                Name = "Reunion con Grupo A",
+                Id = new Guid(),
+                Name = "Group A Meeting",
                 Location = "Parque Primavera",
-                DayAndTime = DateTime.Now,
-                ParticipantGroupId = 0,
-                AttendeeIds = new List<int>() { 1, 2, 3 },
-                CommittmentHolderIds = new List<int>() { 1, 2 },
-                FeePayerIds = new List<int>() { 2, 3 }
+                DayAndTime = new DateTime(2017, 3, 15, 12, 0, 0, 0),
+                ParticipantGroupId = new Guid(),
+                AttendeeIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant1Id,
+                    DemoParticipantRepository.participant2Id,
+                    DemoParticipantRepository.participant3Id
+                },
+                CommittmentHolderIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant1Id,
+                    DemoParticipantRepository.participant2Id
+                },
+                FeePayerIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant2Id,
+                    DemoParticipantRepository.participant3Id
+                }
             },
             new Meeting
             {
-                Id = 1,
-                Name = "Reunion con Grupo B",
+                Id = new Guid(),
+                Name = "Group B Meeting",
                 Location = "Plaza de Felicidad",
-                DayAndTime = DateTime.Now,
-                ParticipantGroupId = 1,
-                AttendeeIds = new List<int>() { 4, 5 },
-                CommittmentHolderIds = new List<int>() { 4 },
-                FeePayerIds = new List<int>() { 5 }
+                DayAndTime = new DateTime(2017, 3, 18, 9, 30, 0, 0),
+                ParticipantGroupId = new Guid(),
+                AttendeeIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant4Id,
+                    DemoParticipantRepository.participant5Id
+                },
+                CommittmentHolderIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant4Id
+                },
+                FeePayerIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant5Id
+                }
             },
             new Meeting
             {
-                Id = 2,
-                Name = "Reunion con Grupo A",
+                Id = new Guid(),
+                Name = "Group A Meeting",
                 Location = "Parque Primavera",
-                DayAndTime = DateTime.Now,
-                ParticipantGroupId = 0,
-                AttendeeIds = new List<int>() { 0, 2, 3 },
-                CommittmentHolderIds = new List<int>() { 2 },
-                FeePayerIds = new List<int>()
+                DayAndTime = new DateTime(2017, 3, 22, 12, 0, 0, 0),
+                ParticipantGroupId = new Guid(),
+                AttendeeIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant0Id,
+                    DemoParticipantRepository.participant2Id,
+                    DemoParticipantRepository.participant3Id
+                },
+                CommittmentHolderIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant2Id
+                },
+                FeePayerIds = new List<Guid>()
             }
         };
 
@@ -51,13 +82,34 @@ namespace InterweaveMobile.Repositories
             return new Task<IEnumerable<Meeting>>(() => { return demoMeetings; });
         }
 
-        public Task<Meeting> GetByIdAsync(int id)
+        public Task<Meeting> GetByIdAsync(Guid id)
         {
             return new Task<Meeting>(() => 
                 {
                     return demoMeetings
                         .Where<Meeting>((x) => x.Id == id)
                         .First<Meeting>();
+                }
+            );
+        }
+
+        public Task<Boolean> UpdateMeeting(Meeting updatedMeeting)
+        {
+            bool updated = false;
+
+            for (int i = 0; i < demoMeetings.Count; i++)
+            {
+                if (demoMeetings[i].Id == updatedMeeting.Id)
+                {
+                    demoMeetings[i].Id = updatedMeeting.Id;
+                    updated = true;
+                    break;
+                }
+            }
+
+            return new Task<Boolean>(() =>
+                {
+                    return updated;
                 }
             );
         }

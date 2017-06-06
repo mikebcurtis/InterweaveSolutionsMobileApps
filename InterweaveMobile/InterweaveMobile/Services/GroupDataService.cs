@@ -25,7 +25,7 @@ namespace InterweaveMobile.Services
             foreach (var group in groups)
             {
                 List<Participant> participants = new List<Participant>();
-                foreach (int id in group.ParticipantIds)
+                foreach (Guid id in group.ParticipantIds)
                 {
                     participants.Add(await _participantRepository.GetParticipantDetailsAsync(id));
                 }

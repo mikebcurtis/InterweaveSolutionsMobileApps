@@ -9,11 +9,18 @@ namespace InterweaveMobile.Repositories
 {
     public class DemoParticipantRepository : IParticipantRepository
     {
+        public static readonly Guid participant0Id = Guid.NewGuid();
+        public static readonly Guid participant1Id = Guid.NewGuid();
+        public static readonly Guid participant2Id = Guid.NewGuid();
+        public static readonly Guid participant3Id = Guid.NewGuid();
+        public static readonly Guid participant4Id = Guid.NewGuid();
+        public static readonly Guid participant5Id = Guid.NewGuid();
+
         private static readonly List<Participant> demoParticipants = new List<Participant>()
         {
                 new Participant
                 {
-                    Id = 0,
+                    Id = participant0Id,
                     Name = "Eula Hoffman",
                     Email = "eulahoffman@email.com",
                     Phone = "(123) 456-7890",
@@ -22,7 +29,7 @@ namespace InterweaveMobile.Repositories
                 },
                 new Participant
                 {
-                    Id = 1,
+                    Id = participant1Id,
                     Name = "Andres Reed",
                     Email = "andresreed@email.com",
                     Phone = "(123) 456-7890",
@@ -31,7 +38,7 @@ namespace InterweaveMobile.Repositories
                 },
                 new Participant
                 {
-                    Id = 2,
+                    Id = participant2Id,
                     Name = "Daisy Owen",
                     Email = "daisyowen@email.com",
                     Phone = "(123) 456-7890",
@@ -40,7 +47,7 @@ namespace InterweaveMobile.Repositories
                 },
                 new Participant
                 {
-                    Id = 3,
+                    Id = participant3Id,
                     Name = "Leslie Reyes",
                     Email = "lesliereyes@email.com",
                     Phone = "(123) 456-7890",
@@ -49,7 +56,7 @@ namespace InterweaveMobile.Repositories
                 },
                 new Participant
                 {
-                    Id = 4,
+                    Id = participant4Id,
                     Name = "Nick Bailey",
                     Email = "nickbailey@email.com",
                     Phone = "(123) 456-7890",
@@ -58,7 +65,7 @@ namespace InterweaveMobile.Repositories
                 },
                 new Participant
                 {
-                    Id = 5,
+                    Id = participant5Id,
                     Name = "Oliver Mcgee",
                     Email = "olivermcgee@email.com",
                     Phone = "(123) 456-7890",
@@ -67,7 +74,7 @@ namespace InterweaveMobile.Repositories
                 }
             };
 
-        public Task<Participant> GetParticipantDetailsAsync(int id)
+        public Task<Participant> GetParticipantDetailsAsync(Guid id)
         {
             return new Task<Participant>(() => 
                 {

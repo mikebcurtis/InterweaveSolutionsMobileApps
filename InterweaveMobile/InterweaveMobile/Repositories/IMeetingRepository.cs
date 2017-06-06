@@ -10,7 +10,7 @@ namespace InterweaveMobile.Repositories
     public interface IMeetingRepository
     {
         Task<IEnumerable<Meeting>> GetAllAsync();
-
-        Task<Meeting> GetByIdAsync(int id);
+        Task<Meeting> GetByIdAsync(Guid id);
+        Task<Boolean> UpdateMeeting(Meeting updatedMeeting);
     }
 }

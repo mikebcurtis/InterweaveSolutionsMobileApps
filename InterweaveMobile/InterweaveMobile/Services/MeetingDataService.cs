@@ -23,27 +23,27 @@ namespace InterweaveMobile.Services
 
         public async Task<IEnumerable<Meeting>> GetAllMeetingsAsync()
         {
-            var meetings = await _meetingRepository.GetAllAsync();
+            IEnumerable<Meeting> meetings = await _meetingRepository.GetAllAsync();
             foreach (var meeting in meetings)
             {
                 meeting.ParticipantGroup = await _groupRepository.GetById(meeting.ParticipantGroupId);
 
                 List<Participant> attendees = new List<Participant>();
-                foreach (int id in meeting.AttendeeIds)
+                foreach (Guid id in meeting.AttendeeIds)
                 {
                     attendees.Add(await _participantRepository.GetParticipantDetailsAsync(id));
                 }
                 meeting.Attendees = attendees;
 
                 List<Participant> feepayers = new List<Participant>();
-                foreach (int id in meeting.FeePayerIds)
+                foreach (Guid id in meeting.FeePayerIds)
                 {
                     feepayers.Add(await _participantRepository.GetParticipantDetailsAsync(id));
                 }
                 meeting.FeePayers = feepayers;
 
                 List<Participant> committers = new List<Participant>();
-                foreach (int id in meeting.CommittmentHolderIds)
+                foreach (Guid id in meeting.CommittmentHolderIds)
                 {
                     committers.Add(await _participantRepository.GetParticipantDetailsAsync(id));
                 }
@@ -51,6 +51,11 @@ namespace InterweaveMobile.Services
             }
 
             return meetings;
+        }
+
+        public async Task<Meeting> UpdateMeetingAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

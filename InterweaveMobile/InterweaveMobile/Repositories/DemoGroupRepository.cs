@@ -13,15 +13,25 @@ namespace InterweaveMobile.Repositories
         {
             new Group
             {
-                Id = 0,
-                Name = "Grupo A",
-                ParticipantIds = new List<int>() { 0, 1, 2, 3 }
+                Id = Guid.NewGuid(),
+                Name = "Group A",
+                ParticipantIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant0Id,
+                    DemoParticipantRepository.participant1Id,
+                    DemoParticipantRepository.participant2Id,
+                    DemoParticipantRepository.participant3Id
+                }
             },
             new Group
             {
-                Id = 1,
-                Name = "Grupo B",
-                ParticipantIds = new List<int>() { 4, 5 }
+                Id = Guid.NewGuid(),
+                Name = "Group B",
+                ParticipantIds = new List<Guid>()
+                {
+                    DemoParticipantRepository.participant4Id,
+                    DemoParticipantRepository.participant5Id
+                }
             }
         };
 
@@ -30,7 +40,7 @@ namespace InterweaveMobile.Repositories
             return new Task<IEnumerable<Group>>(() => { return demoGroups; });
         }
 
-        public Task<Group> GetById(int id)
+        public Task<Group> GetById(Guid id)
         {
             return new Task<Group>(() =>
                 {

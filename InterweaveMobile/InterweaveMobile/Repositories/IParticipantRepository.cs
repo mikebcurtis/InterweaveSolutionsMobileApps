@@ -9,6 +9,6 @@ namespace InterweaveMobile.Repositories
 {
     public interface IParticipantRepository
     {
-        Task<Participant> GetParticipantDetailsAsync(int id);
+        Task<Participant> GetParticipantDetailsAsync(Guid id);
     }
 }

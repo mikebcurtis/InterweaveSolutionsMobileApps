@@ -10,5 +10,6 @@ namespace InterweaveMobile.Services
     public interface IMeetingService
     {
         Task<IEnumerable<Meeting>> GetAllMeetingsAsync();
+        Task<Meeting> UpdateMeetingAsync();
     }
 }

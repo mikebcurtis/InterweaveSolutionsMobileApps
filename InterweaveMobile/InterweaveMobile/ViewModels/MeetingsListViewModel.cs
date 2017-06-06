@@ -27,30 +27,6 @@ namespace InterweaveMobile.ViewModels
             }
         }
 
-        //public MvxCommand AddCommand
-        //{
-        //    get
-        //    {
-        //        return new MvxCommand(() => 
-        //            {
-        //                throw new NotImplementedException();
-        //            }
-        //         );
-        //    }
-        //}
-
-        //public MvxCommand OpenMeetingDetailView
-        //{
-        //    get
-        //    {
-        //        return new MvxCommand(() => 
-        //            {
-        //                throw new NotImplementedException();
-        //            }
-        //        );
-        //    }
-        //}
-
         public MeetingsListViewModel(IMeetingService meetingService)
         {
             _meetingService = meetingService;
