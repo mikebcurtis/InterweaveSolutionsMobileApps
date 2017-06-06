@@ -14,11 +14,11 @@ namespace InterweaveMobile.Services
         private IMeetingRepository _meetingRepository;
         private IParticipantRepository _participantRepository;
 
-        public MeetingDataService(IMeetingRepository meetingRepository, IGroupRepository groupRepository, IParticipantRepository participantRepository)
+        public MeetingDataService()
         {
-            _meetingRepository = meetingRepository;
-            _groupRepository = groupRepository;
-            _participantRepository = participantRepository;
+            _meetingRepository = MeetingRepositoryFactory.GetMeetingRepository();
+            _groupRepository = GroupRepositoryFactory.GetGroupRepository();
+            _participantRepository = ParticipantRepositoryFactory.GetParticipantRepository();
         }
 
         public async Task<IEnumerable<Meeting>> GetAllMeetingsAsync()

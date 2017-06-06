@@ -27,9 +27,9 @@ namespace InterweaveMobile.ViewModels
             }
         }
 
-        public MeetingsListViewModel(IMeetingService meetingService)
+        public MeetingsListViewModel()
         {
-            _meetingService = meetingService;
+            _meetingService = MeetingServiceFactory.GetMeetingService();
         }
 
         protected override async Task InitializeAsync()

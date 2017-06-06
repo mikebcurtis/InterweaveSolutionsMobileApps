@@ -13,10 +13,10 @@ namespace InterweaveMobile.Services
         private IGroupRepository _groupRepository;
         private IParticipantRepository _participantRepository;
 
-        public GroupDataService(IGroupRepository groupRepository, IParticipantRepository participantRepository)
+        public GroupDataService()
         {
-            _groupRepository = groupRepository;
-            _participantRepository = participantRepository;
+            _groupRepository = GroupRepositoryFactory.GetGroupRepository();
+            _participantRepository = ParticipantRepositoryFactory.GetParticipantRepository();
         }
 
         public async Task<IEnumerable<Group>> GetAllGroupsAsync()
