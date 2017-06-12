@@ -9,12 +9,16 @@
     <Import_RootNamespace>InterweaveMobile</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AboutPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)GroupCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GroupsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MeetingsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Certificate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Group.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Meeting.cs" />

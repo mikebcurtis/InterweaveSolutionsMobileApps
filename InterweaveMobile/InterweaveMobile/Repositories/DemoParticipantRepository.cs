@@ -74,15 +74,11 @@ namespace InterweaveMobile.Repositories
                 }
             };
 
-        public Task<Participant> GetParticipantDetailsAsync(Guid id)
+        public async Task<Participant> GetParticipantDetailsAsync(Guid id)
         {
-            return new Task<Participant>(() => 
-                {
-                    return demoParticipants
-                        .Where<Participant>(p => p.Id == id)
-                        .First<Participant>();
-                }
-            );
+            return demoParticipants
+                .Where<Participant>(p => p.Id == id)
+                .First<Participant>();
         }
     }
 }

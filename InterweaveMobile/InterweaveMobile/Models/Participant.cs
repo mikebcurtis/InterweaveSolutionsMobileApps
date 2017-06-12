@@ -14,5 +14,10 @@ namespace InterweaveMobile.Models
         public string Phone { get; set; }
         public string Location { get; set; }
         public string Country { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

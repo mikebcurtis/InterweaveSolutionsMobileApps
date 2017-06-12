@@ -35,9 +35,9 @@ namespace InterweaveMobile.Repositories
             }
         };
 
-        public Task<IEnumerable<Group>> GetAllAsync()
+        public async Task<IEnumerable<Group>> GetAllAsync()
         {
-            return new Task<IEnumerable<Group>>(() => { return demoGroups; });
+            return demoGroups;
         }
 
         public Task<Group> GetById(Guid id)

@@ -13,8 +13,27 @@ namespace InterweaveMobile
 		{
 			InitializeComponent();
 
-			MainPage = new InterweaveMobile.MainPage();
-		}
+            MainPage = new TabbedPage();
+
+            ContentPage groupsPage = new GroupsPage()
+            {
+                Title = "Groups"
+            };
+
+            ContentPage meetingsPage = new MeetingsPage()
+            {
+                Title = "Meetings"
+            };
+
+            ContentPage aboutPage = new AboutPage()
+            {
+                Title = "About"
+            };
+
+            ((TabbedPage)MainPage).Children.Add(groupsPage);
+            ((TabbedPage)MainPage).Children.Add(meetingsPage);
+            ((TabbedPage)MainPage).Children.Add(aboutPage);
+        }
 
 		protected override void OnStart ()
 		{
