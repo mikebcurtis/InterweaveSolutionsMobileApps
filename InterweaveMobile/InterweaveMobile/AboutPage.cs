@@ -11,6 +11,8 @@ namespace InterweaveMobile
 	{
 		public AboutPage ()
 		{
+            Icon = "settings_icon.png";
+
 			Content = new StackLayout {
 				Children = {
 					new Label { Text = "About goes here" }

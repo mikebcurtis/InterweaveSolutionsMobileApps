@@ -11,6 +11,8 @@ namespace InterweaveMobile
 	{
 		public MeetingsPage ()
 		{
+            Icon = "meeting_icon.png";
+
 			Content = new StackLayout {
 				Children = {
 					new Label { Text = "Meetings go here" }

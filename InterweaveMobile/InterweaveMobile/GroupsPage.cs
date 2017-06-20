@@ -22,6 +22,7 @@ namespace InterweaveMobile
 
             // General Properties
             Padding = new Thickness(5);
+            Icon = "group_icon.png";
 
             // Content
             Button newGroupButton = new Button()
